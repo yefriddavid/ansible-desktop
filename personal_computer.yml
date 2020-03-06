@@ -13,6 +13,7 @@
     - {role: flameshot, tags: ['flameshot']}
     - {role: github-cli, tags: ['github-cli']}
     - {role: gnome-extensions, tags: ['gnome-extensions']}
+    - {role: gnome-gtk3, tags: ['gnome-gtk3']}
     - {role: gnome-keybindings, tags: ['gnome-keybindings']}
     - {role: gnome-themes, tags: ['gnome-themes']}
     - {role: gnome-preferences, tags: ['gnome-preferences']}

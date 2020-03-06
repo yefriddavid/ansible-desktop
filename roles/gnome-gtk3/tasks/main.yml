@@ -1,0 +1,6 @@
+---
+- name: GNOME GTK+ 3 - Install Builder Application with Flatpak
+  become: true
+  flatpak:
+    name: org.gnome.Builder 
+    state: present

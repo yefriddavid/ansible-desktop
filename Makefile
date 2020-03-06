@@ -8,7 +8,7 @@ SHELL:=bash
 OS_VERSION_NAME := $(shell lsb_release -cs)
 
 # Main Ansible Playbook Command
-ANSIBLE=ansible-playbook personal_computer.yml -i inventory --ask-become-pass -e 'ansible_user='$(shell whoami)
+ANSIBLE=ansible-playbook personal_computer.yml -v -i inventory --ask-become-pass -e 'ansible_user='$(shell whoami)
 
 
 # - to suppress if it doesn't exist
@@ -110,6 +110,10 @@ github-cli: ## Install GitHub CLI deb, directly from GitHub Release
 gnome-extensions:
 gnome-extensions: ## Install GNOME Extensions
 	@$(ANSIBLE) --tags="gnome-extensions"
+
+gnome-gtk:
+gnome-gtk: ## Install GNOME GTK+ 3 Toolkit
+	@$(ANSIBLE) --tags="gnome-gtk3"
 
 gnome-keybindings:
 gnome-keybindings: ## Set my GNOME Keybindings
