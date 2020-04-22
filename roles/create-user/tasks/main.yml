@@ -5,9 +5,9 @@
     state: present
 
 - name: Creating user "{{ entity_username }}" for dev client
-    user:
-      name: "{{ entity_username }}"
-      createhome: true
-      password: "{{ entity_password | password_hash('sha512') }}"
-      groups: admin company
+  user:
+    name: "{{ entity_username }}"
+    createhome: true
+    password: "{{ entity_password | password_hash('sha512') }}"
+    groups: admin company
 
