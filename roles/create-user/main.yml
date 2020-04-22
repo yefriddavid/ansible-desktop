@@ -1,5 +1,10 @@
 ---
-- name: Create my personal dev user dev
+- name: Create company group
+  group:
+    name: company
+    state: present
+
+- name: Create my personal dev user
   vars:
     entity_username: "traze"
     entity_password: "4444"
@@ -7,6 +12,7 @@
   - name: Creating user "{{ entity_username }}" with admin access
     user:
       name: "{{ entity_username }}"
+      createhome: true
       password: "{{ entity_password | password_hash('sha512') }}"
-      groups: admin
+      groups: admin company
 

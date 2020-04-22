@@ -7,7 +7,8 @@ SHELL:=bash
 # Ubuntu distro string
 OS_VERSION_NAME := $(shell lsb_release -cs)
 
-HOSTNAME = $(shell hostname)
+#HOSTNAME = $(shell hostname)
+HOSTNAME = localhost
 
 # Main Ansible Playbook Command (prompts for password)
 ANSIBLE=ansible-playbook personal_computer.yml -v -i inventory -l $(HOSTNAME) --ask-become-pass -e 'ansible_user='$(shell whoami)
@@ -90,6 +91,9 @@ common:
 common: ## Install Common apt packages
 	@$(ANSIBLE) --tags="common"
 
+create-user:
+create-user: ## Create dev user
+	@$(ANSIBLE) --tags="create-user"
 
 cherrytree:
 cherrytree: ## Install Cherrytree using a PPA and apt
