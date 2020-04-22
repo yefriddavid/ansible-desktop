@@ -4,12 +4,7 @@
     name: company
     state: present
 
-- name: Create my personal dev user
-  vars:
-    entity_username: "traze"
-    entity_password: "4444"
-  tasks:
-  - name: Creating user "{{ entity_username }}" with admin access
+- name: Creating user "{{ entity_username }}" for dev client
     user:
       name: "{{ entity_username }}"
       createhome: true
