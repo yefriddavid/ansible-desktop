@@ -1,4 +1,4 @@
-G--
+--
 - hosts: localhost
   connection: local
   roles:
