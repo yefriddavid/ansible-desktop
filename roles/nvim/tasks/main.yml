@@ -1,14 +1,15 @@
 ---
-- debug:
-    msg: System {{ neovim_config_file }}
-    #msg: System {{ default(defa) }}
-
-- debug:
-    msg: Hello david
+#- debug:
+#    msg: System {{ neovim_config_file }}
+#    #msg: System {{ default(defa) }}
+#
+#- debug:
+#    msg: Hello david
 
 - tags: [neovim]
   block:
     - name: Install neovim
+      become: true
       package:
         name: "{{ neovim_packages }}"
         state: present
@@ -19,14 +20,14 @@
         key: "{{ neovim_user_id }}"
         split: ~
 
-    - name: Create neovim directory for autoloading configurations
-      file:
-        path: "{{ neovim_autoload_dir }}"
-        state: directory
-        recurse: yes
-        mode: 0o700
-        owner: "{{ neovim_user_id }}"
-      when: neovim_plugins
+#    - name: Create neovim directory for autoloading configurations
+#      file:
+#        path: "{{ neovim_autoload_dir }}"
+#        state: directory
+#        recurse: yes
+#        mode: 0o700
+#        owner: "{{ neovim_user_id }}"
+#      when: neovim_plugins
 #
 #    - name: Install vim-plug
 #      get_url:
@@ -36,12 +37,12 @@
 #        owner: "{{ neovim_user_id }}"
 #      when: neovim_plugins
 #
-    - name: Create base directory for configurations of neovim
-      file:
-        path: "{{ neovim_config_dir }}"
-        state: directory
-        mode: 0o700
-        owner: "{{ neovim_user_id }}"
+#    - name: Create base directory for configurations of neovim
+#      file:
+#        path: "{{ neovim_config_dir }}"
+#        state: directory
+#        mode: 0o700
+#        owner: "{{ neovim_user_id }}"
 #
 #    - name: Configure neovim
 #      template:
