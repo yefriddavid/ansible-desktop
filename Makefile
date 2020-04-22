@@ -83,6 +83,10 @@ lint:  ## Lint the repo
 lint:
 	bash scripts/lint.sh
 
+nvim:
+nvim: ## Install zsh and oh-my-zsh
+	@$(ANSIBLE) --tags="nvim"
+
 zsh:
 zsh: ## Install zsh and oh-my-zsh
 	@$(ANSIBLE) --tags="zsh"
