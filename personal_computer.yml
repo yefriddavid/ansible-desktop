@@ -4,6 +4,10 @@
   roles:
     - {role: create-user, tags: ['create-user']}
     - {role: nvim, tags: ['nvim']}
+    - {role: ranger, tags: ['ranger']}
+    - {role: virtualbox, tags: ['virtualbox']}
+    - {role: mysql-workbench, tags: ['mysql-workbench']}
+
     - {role: zsh, tags: ['zsh']}
     - {role: cherrytree, tags: ['cherrytree']}
     - {role: docker, tags: ['docker']}

@@ -395,3 +395,9 @@ interpreter_python ="/usr/bin/python3"
 
 Reference:
 <https://docs.ansible.com/ansible/latest/reference_appendices/interpreter_discovery.html>
+
+
+Virtual Machine error compy and paste
+https://superuser.com/a/1510257/972109
+
+
