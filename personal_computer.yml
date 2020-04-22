@@ -3,6 +3,7 @@
   connection: local
   roles:
     - {role: create-user, tags: ['create-user']}
+    - {role: nvim, tags: ['nvim']}
     - {role: zsh, tags: ['zsh']}
     - {role: cherrytree, tags: ['cherrytree']}
     - {role: docker, tags: ['docker']}

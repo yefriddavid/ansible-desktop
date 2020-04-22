@@ -1,13 +1,15 @@
 ---
 - name: Create company group
+  become: true
   group:
     name: company
     state: present
 
 - name: Creating user "{{ entity_username }}" for dev client
+  become: true
   user:
     name: "{{ entity_username }}"
     createhome: true
     password: "{{ entity_password | password_hash('sha512') }}"
-    groups: admin company
+    groups: sudo,company
 
