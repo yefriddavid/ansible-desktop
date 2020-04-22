@@ -124,6 +124,7 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+.editorconfig
 
 # unknown
 .DS_Store

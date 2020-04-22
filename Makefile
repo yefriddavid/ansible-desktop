@@ -73,10 +73,10 @@ non-ansible: ## Runs all non-ansible make targets for fresh install (all target)
 	# No user input required
 	make flameshot-keybindings
 	make python-three-six-install
-	make python-three-six-supporting
-	make python-three-seven-install
-	make python-three-seven-supporting
-	make poetry
+	#make python-three-six-supporting
+	#make python-three-seven-install
+	#make python-three-seven-supporting
+	#make poetry
 
 lint:  ## Lint the repo
 lint:
@@ -122,134 +122,134 @@ python-three-six-install:
 	# python3 pip
 	sudo apt install -y python3-pip
 
-python-three-six-supporting: ## Install useful packages
-python-three-six-supporting:
+#python-three-six-supporting: ## Install useful packages
+#python-three-six-supporting:
+#
+#	# upgrade pip
+#	python3.6 -m pip install --user --upgrade pip
+#	-python3.6 -m pip install --upgrade keyrings.alt --user
+#	-python3.6 -m pip install --user --upgrade setuptools
+#
+#	# python3 pytest
+#	sudo apt install -y python3-pytest
+#
+#	# At this point, Python 3.6 is installed on your Ubuntu system and ready to be used.
+#	# You can verify it by typing:
+#	python3.6 --version
+#	python3.6 -m pip --version
+#	python3.6 -m pytest --version
+#
+#	python3.6 -m pip install --user twine
+#	python3.6 -m pip install --user wheel
+#	python3.6 -m pip install --user flit
+#	python3.6 -m pip install --user cookiecutter
+#	python3.6 -m pip install --user pipenv
 
-	# upgrade pip
-	python3.6 -m pip install --user --upgrade pip
-	-python3.6 -m pip install --upgrade keyrings.alt --user
-	-python3.6 -m pip install --user --upgrade setuptools
+#python-three-seven-install: ## Install python3.7 using apt (main install)
+#python-three-seven-install:
+#
+#	sudo apt-get update
+#
+#	# Start by updating the packages list and installing the prerequisites:
+#	sudo apt install software-properties-common
+#
+#	# Next, add the deadsnakes PPA to your sources list:
+#	# sudo add-apt-repository ppa:deadsnakes/ppa # not for 19.04
+#	# when prompted, press Enter to continue
+#
+#	# Once the repository is enabled, install Python 3.7 with: (added libpython3.7-dev for pip installs)
+#	# - httptools wasn't installing correctly until adding it
+#	# - see: https://github.com/huge-success/sanic/issues/1503#issuecomment-469031275
+#	sudo apt update
+#	sudo apt install -y python3.7 libpython3.7-dev
+#
+#	# At this point, Python 3.7 is installed on your Ubuntu system and ready to be used.
+#	# You can verify it by typing:
+#	python3.7 --version
+#
+#python-three-seven-supporting: ## Install useful packages
+#python-three-seven-supporting:
+#
+#	# python3 pip
+#	sudo apt install -y python3-pip
+#
+#	# upgrade pip
+#	python3.7 -m pip install --user --upgrade pip
+#	-python3.7 -m pip install --upgrade keyrings.alt --user
+#	-python3.7 -m pip install --user --upgrade setuptools
+#
+#	# python3 pytest
+#	sudo apt install -y python3-pytest
+#
+#	# At this point, Python 3.7 is installed on your Ubuntu system and ready to be used.
+#	# You can verify it by typing:
+#	python3.7 --version
+#	python3.7 -m pip --version
+#	python3.7 -m pytest --version
+#
+##	python3.7 -m pip install --user twine
+##	python3.7 -m pip install --user wheel
+##	python3.7 -m pip install --user flit
+##	python3.7 -m pip install --user cookiecutter
+##	python3.7 -m pip install --user pipenv
+#
+#python-three-eight-install: ## Install python3.7 using apt (main install)
+#python-three-eight-install:
+#
+#	sudo apt-get update
+#
+#	# Start by updating the packages list and installing the prerequisites:
+#	sudo apt install software-properties-common
+#
+#	# Once the repository is enabled, install Python 3.8 with: (added libpython3.8-dev for pip installs)
+#	# - httptools wasn't installing correctly until adding it
+#	# - see: https://github.com/huge-success/sanic/issues/1503#issuecomment-469031275
+#	sudo apt update
+#	sudo apt install -y python3.8 libpython3.8-dev
+#
+#	# At this point, Python 3.8 is installed on your Ubuntu system and ready to be used.
+#	# You can verify it by typing:
+#	python3.8 --version
+#
+#python-three-eight-supporting: ## Install useful packages
+#python-three-eight-supporting:
+#
+#	# python3 pip
+#	sudo apt install -y python3-pip
+#
+#	# upgrade pip
+#	python3.8 -m pip install --user --upgrade pip
+#	-python3.8 -m pip install --upgrade keyrings.alt --user
+#	-python3.8 -m pip install --user --upgrade setuptools
+#
+#	# python3 pytest
+#	sudo apt install -y python3-pytest
+#
+#	# At this point, Python 3.7 is installed on your Ubuntu system and ready to be used.
+#	# You can verify it by typing:
+#	python3.8 --version
+#	python3.8 -m pip --version
+#	python3.8 -m pytest --version
+#
+##	python3.8 -m pip install --user twine
+##	python3.8 -m pip install --user wheel
+##	python3.8 -m pip install --user flit
+##	python3.8 -m pip install --user cookiecutter
+##	python3.8 -m pip install --user pipenv
 
-	# python3 pytest
-	sudo apt install -y python3-pytest
-
-	# At this point, Python 3.6 is installed on your Ubuntu system and ready to be used.
-	# You can verify it by typing:
-	python3.6 --version
-	python3.6 -m pip --version
-	python3.6 -m pytest --version
-
-	python3.6 -m pip install --user twine
-	python3.6 -m pip install --user wheel
-	python3.6 -m pip install --user flit
-	python3.6 -m pip install --user cookiecutter
-	python3.6 -m pip install --user pipenv
-
-python-three-seven-install: ## Install python3.7 using apt (main install)
-python-three-seven-install:
-
-	sudo apt-get update
-
-	# Start by updating the packages list and installing the prerequisites:
-	sudo apt install software-properties-common
-
-	# Next, add the deadsnakes PPA to your sources list:
-	# sudo add-apt-repository ppa:deadsnakes/ppa # not for 19.04
-	# when prompted, press Enter to continue
-
-	# Once the repository is enabled, install Python 3.7 with: (added libpython3.7-dev for pip installs)
-	# - httptools wasn't installing correctly until adding it
-	# - see: https://github.com/huge-success/sanic/issues/1503#issuecomment-469031275
-	sudo apt update
-	sudo apt install -y python3.7 libpython3.7-dev
-
-	# At this point, Python 3.7 is installed on your Ubuntu system and ready to be used.
-	# You can verify it by typing:
-	python3.7 --version
-
-python-three-seven-supporting: ## Install useful packages
-python-three-seven-supporting:
-
-	# python3 pip
-	sudo apt install -y python3-pip
-
-	# upgrade pip
-	python3.7 -m pip install --user --upgrade pip
-	-python3.7 -m pip install --upgrade keyrings.alt --user
-	-python3.7 -m pip install --user --upgrade setuptools
-
-	# python3 pytest
-	sudo apt install -y python3-pytest
-
-	# At this point, Python 3.7 is installed on your Ubuntu system and ready to be used.
-	# You can verify it by typing:
-	python3.7 --version
-	python3.7 -m pip --version
-	python3.7 -m pytest --version
-
-	python3.7 -m pip install --user twine
-	python3.7 -m pip install --user wheel
-	python3.7 -m pip install --user flit
-	python3.7 -m pip install --user cookiecutter
-	python3.7 -m pip install --user pipenv
-
-python-three-eight-install: ## Install python3.7 using apt (main install)
-python-three-eight-install:
-
-	sudo apt-get update
-
-	# Start by updating the packages list and installing the prerequisites:
-	sudo apt install software-properties-common
-
-	# Once the repository is enabled, install Python 3.8 with: (added libpython3.8-dev for pip installs)
-	# - httptools wasn't installing correctly until adding it
-	# - see: https://github.com/huge-success/sanic/issues/1503#issuecomment-469031275
-	sudo apt update
-	sudo apt install -y python3.8 libpython3.8-dev
-
-	# At this point, Python 3.8 is installed on your Ubuntu system and ready to be used.
-	# You can verify it by typing:
-	python3.8 --version
-
-python-three-eight-supporting: ## Install useful packages
-python-three-eight-supporting:
-
-	# python3 pip
-	sudo apt install -y python3-pip
-
-	# upgrade pip
-	python3.8 -m pip install --user --upgrade pip
-	-python3.8 -m pip install --upgrade keyrings.alt --user
-	-python3.8 -m pip install --user --upgrade setuptools
-
-	# python3 pytest
-	sudo apt install -y python3-pytest
-
-	# At this point, Python 3.7 is installed on your Ubuntu system and ready to be used.
-	# You can verify it by typing:
-	python3.8 --version
-	python3.8 -m pip --version
-	python3.8 -m pytest --version
-
-	python3.8 -m pip install --user twine
-	python3.8 -m pip install --user wheel
-	python3.8 -m pip install --user flit
-	python3.8 -m pip install --user cookiecutter
-	python3.8 -m pip install --user pipenv
-
-poetry: ## Install Poetry (Python Packaging and Dependency Management)
-poetry:
-	# curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python3
-	sudo apt-get install -y python3-venv
-	python3.8 -m pip install --user poetry
+#poetry: ## Install Poetry (Python Packaging and Dependency Management)
+#poetry:
+#	# curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python3
+#	sudo apt-get install -y python3-venv
+#	python3.8 -m pip install --user poetry
 
 common-snaps:
 common-snaps: ## Install Common Snaps
 	@$(ANSIBLE) --tags="common-snaps"
 
-chat-clients:
-chat-clients: ## Install Chat Client Snaps
-	@$(ANSIBLE) --tags="chat-clients"
+#chat-clients:
+#chat-clients: ## Install Chat Client Snaps
+#	@$(ANSIBLE) --tags="chat-clients"
 
 development-tools:
 development-tools: ## Install VS Code, Postman, and Sublime Text Snaps
@@ -286,9 +286,9 @@ flameshot-keybindings:
 	gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/flameshot/ command '/usr/bin/flameshot gui'
 	gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/flameshot/ binding 'Print'
 
-github-cli:
-github-cli: ## Install GitHub CLI deb, directly from GitHub Release
-	@$(ANSIBLE) --tags="github-cli"
+#github-cli:
+#github-cli: ## Install GitHub CLI deb, directly from GitHub Release
+#	@$(ANSIBLE) --tags="github-cli"
 
 gnome-boxes:
 gnome-boxes: ## Install GNOME Boxes, using Flatpak
@@ -317,9 +317,9 @@ gtk3-icon-browser:
 	# Installs in gnome-preferences role
 	@gtk3-icon-browser &
 
-nordvpn:
-nordvpn: ## Install Peek (GIF Screen Recorder) using a PPA and apt
-	@$(ANSIBLE) --tags="nordvpn"
+#nordvpn:
+#nordvpn: ## Install Peek (GIF Screen Recorder) using a PPA and apt
+#	@$(ANSIBLE) --tags="nordvpn"
 
 stacer:
 stacer: ## Install Stacer (Material System Utility)
@@ -329,40 +329,40 @@ flatpak:
 flatpak: ## Install Peek (GIF Screen Recorder) using a PPA and apt
 	@$(ANSIBLE) --tags="flatpak"
 
-planner:
-planner: ## Install Planner, using Flatpak
-	@$(ANSIBLE) --tags="flatpak, planner"
+#planner:
+#planner: ## Install Planner, using Flatpak
+#	@$(ANSIBLE) --tags="flatpak, planner"
 
-steam: flatpak
-steam: ## Install Steam, using Flatpak
-	@$(ANSIBLE) --tags="steam"
+#steam: flatpak
+#steam: ## Install Steam, using Flatpak
+#	@$(ANSIBLE) --tags="steam"
 
-evolution:
-evolution: ## Install Evolution Email/Calendar/Tasks Client, using Flatpak
-	@$(ANSIBLE) --tags="evolution"
+#evolution:
+#evolution: ## Install Evolution Email/Calendar/Tasks Client, using Flatpak
+#	@$(ANSIBLE) --tags="evolution"
 
-protonmail-bridge:
-protonmail-bridge: ## Install Protonmail Bridge Deb from their website
-	@$(ANSIBLE) --tags="protonmail-bridge"
+#protonmail-bridge:
+#protonmail-bridge: ## Install Protonmail Bridge Deb from their website
+#	@$(ANSIBLE) --tags="protonmail-bridge"
 
-tresorit: ## Install Tresorit
-tresorit:
-	wget -O ~/Downloads/tresorit_installer.run https://installerstorage.blob.core.windows.net/public/install/tresorit_installer.run
-	chmod +x ~/Downloads/tresorit_installer.run
-	$(echo $0) ~/Downloads/tresorit_installer.run
+#tresorit: ## Install Tresorit
+#tresorit:
+#	wget -O ~/Downloads/tresorit_installer.run https://installerstorage.blob.core.windows.net/public/install/tresorit_installer.run
+#	chmod +x ~/Downloads/tresorit_installer.run
+#	$(echo $0) ~/Downloads/tresorit_installer.run
 
-libreoffice:
-libreoffice: ## Install LibreOffice Office Suite, using Flatpak
-	@$(ANSIBLE) --tags="libreoffice"
+#libreoffice:
+#libreoffice: ## Install LibreOffice Office Suite, using Flatpak
+#	@$(ANSIBLE) --tags="libreoffice"
 
 yarn:
 yarn: ## Installs Yarn (and Nodejs)
 	# This role takes care of $$PATH
 	@$(ANSIBLE) --tags="yarn"
 
-ticktick:
-ticktick: ## Installs TickTick using yarn global Nativefier
-	@$(ANSIBLE) --tags="ticktick"
+#ticktick:
+#ticktick: ## Installs TickTick using yarn global Nativefier
+#	@$(ANSIBLE) --tags="ticktick"
 
 
 .DEFAULT_GOAL := help

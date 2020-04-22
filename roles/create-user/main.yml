@@ -1,0 +1,12 @@
+---
+- name: Create my personal dev user dev
+  vars:
+    entity_username: "traze"
+    entity_password: "4444"
+  tasks:
+  - name: Creating user "{{ entity_username }}" with admin access
+    user:
+      name: "{{ entity_username }}"
+      password: "{{ entity_password | password_hash('sha512') }}"
+      groups: admin
+

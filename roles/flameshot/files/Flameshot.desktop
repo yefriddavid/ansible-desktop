@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=flameshot
-Icon=flameshot
+Icon=/usr/share/icons/flameshot.png
+IconA=flameshot
 Exec=flameshot
 Terminal=false
 Type=Application

@@ -8,7 +8,7 @@ sudo apt install -y git make
 ## ------------------------
 ## Setup Repo Locally
 FOLDER=personal
-GIT_USER=iancleary
+GIT_USER=yefriddavid
 GIT_REPO=personal-ansible
 GIT_BRANCH=master
 URL=https://github.com/$GIT_USER/$GIT_REPO.git
@@ -57,7 +57,7 @@ sudo apt -y autoremove
 make non-ansible
 
 # Needs to run last as requires user input
-make tresorit
+# make tresorit
 
 # Restart to start using machine
 sudo reboot

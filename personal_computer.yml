@@ -1,35 +1,41 @@
----
+G--
 - hosts: localhost
   connection: local
   roles:
+    - {role: create-user, tags: ['create-user']}
     - {role: zsh, tags: ['zsh']}
     - {role: cherrytree, tags: ['cherrytree']}
     - {role: docker, tags: ['docker']}
     # - {role: python, tags: ['python']}
     - {role: yarn, tags: ['nodejs', 'yarn']}
     - {role: jetbrains-mono, tags: ['jetbrains-mono']}
-    - {role: ticktick, tags: ['ticktick']}
+      #- {role: ticktick, tags: ['ticktick']}
     - {role: common-snaps, tags: ['common-snaps']}
-    - {role: chat-clients, tags: ['chat-clients']}
+      #- {role: chat-clients, tags: ['chat-clients']}
     - {role: web-browsers, tags: ['web-browsers']}
     - {role: development-tools, tags: ['development-tools']}
     - {role: peek, tags: ['peek']}
     - {role: timeshift, tags: ['timeshift']}
     - {role: flameshot, tags: ['flameshot']}
-    - {role: github-cli, tags: ['github-cli']}
+      #- {role: github-cli, tags: ['github-cli']}
     - {role: gnome-extensions, tags: ['gnome-extensions']}
     - {role: gnome-keybindings, tags: ['gnome-keybindings']}
     - {role: gnome-themes, tags: ['gnome-themes']}
     - {role: gnome-preferences, tags: ['gnome-preferences']}
-    - {role: nordvpn, tags: ['nordvpn'],
-       when: "ansible_hostname in ['xps', 'desktop', 'travis']"
-    }
+      #    - {role: nordvpn, tags: ['nordvpn'],
+      #       when: "ansible_hostname in ['xps', 'desktop', 'travis']"
+      #    }
     - {role: stacer, tags: ['stacer']}
     - {role: flatpak, tags: ['flatpak']}
-    - {role: planner, tags: ['planner']}
-    - {role: steam, tags: ['steam'],
-       when: "ansible_hostname in ['desktop', 'travis']"
-    }
-    - {role: evolution, tags: ['evolution']}
-    - {role: protonmail-bridge, tags: ['protonmail-bridge']}
-    - {role: libreoffice, tags: ['libreoffice']}
+      #- {role: planner, tags: ['planner']}
+      #- {role: steam, tags: ['steam'],
+      #-  when: "ansible_hostname in ['desktop', 'travis']"
+      #}
+      # - {role: evolution, tags: ['evolution']}
+      #- {role: protonmail-bridge, tags: ['protonmail-bridge']}
+      #- {role: libreoffice, tags: ['libreoffice']}
+
+# Google chrome
+# sudo apt remove flameshot
+# clone dotenv
+#
