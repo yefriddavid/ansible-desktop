@@ -24,3 +24,6 @@ zsh_plugins:
   - docker-compose
   - git
   - pipenv
+
+# fzf
+

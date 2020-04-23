@@ -1,0 +1,17 @@
+---
+- name: Install fzf
+  git:
+        repo: https://github.com/junegunn/fzf.git
+        dest: "{{ansible_env.HOME}}/.fzf"
+        depth: 1
+        update: no
+
+- name: Check ~/.fzf
+  stat:
+    path: "{{ansible_env.HOME}}/.fzf"
+
+- name: Install fzf
+  command: "./install"
+  args:
+    chdir: "{{ansible_env.HOME}}/.fzf"
+

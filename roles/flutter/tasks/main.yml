@@ -1,0 +1,18 @@
+---
+#git clone https://github.com/flutter/flutter.git -b stable
+- debug:
+        #become: true
+        msg: "{{ ansible_env.HOME }}"
+- name: Create flutter directory
+  file:
+          path: "{{ansible_env.HOME}}/development"
+          state: directory
+          #mode: "u=rw,g=wx,o=rwx"
+- name: Flutter repository
+  git:
+        repo: 'https://github.com/flutter/flutter.git'
+        dest: "{{ansible_env.HOME}}/development/flutter"
+        version: stable
+        update: no
+
+# https://flutter.dev/docs/get-started/install/linux

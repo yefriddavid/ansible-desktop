@@ -3,6 +3,10 @@
   connection: local
   roles:
     - {role: create-user, tags: ['create-user']}
+    - {role: flutter, tags: ['flutter']}
+    - {role: fzf, tags: ['fzf']}
+    - {role: golang, tags: ['golang']}
+    - {role: aws-cli, tags: ['aws-cli']}
     - {role: redis-desktop, tags: ['redis-desktop']}
     - {role: nvim, tags: ['nvim']}
     - {role: supervisor, tags: ['supervisor']}

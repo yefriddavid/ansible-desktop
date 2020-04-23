@@ -109,9 +109,22 @@ supervisor: ## Install supervisor
 redis-desktop:
 redis-desktop: ## Install redis-desktop
 	@$(ANSIBLE) --tags="redis-desktop"
+
+golang:
+golang: ## Install golang
+	@$(ANSIBLE) --tags="golang"
+
+fzf:
+fzf: ## Install fzf
+	@$(ANSIBLE) --tags="fzf"
+
 tmux:
 tmux: ## Install tmux
 	@$(ANSIBLE) --tags="tmux"
+
+flutter:
+flutter: ## Install virtualbox 
+	@$(ANSIBLE) --tags="flutter"
 
 nvim:
 nvim: ## Install virtualbox 
@@ -280,6 +293,10 @@ python-three-six-install:
 #	# curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python3
 #	sudo apt-get install -y python3-venv
 #	python3.8 -m pip install --user poetry
+
+aws-cli:
+aws-cli: ## Install aws-cli
+	@$(ANSIBLE) --tags="aws-cli"
 
 common-snaps:
 common-snaps: ## Install Common Snaps

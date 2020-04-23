@@ -1,0 +1,10 @@
+---
+
+GOLANG_VERSION: "1.9.3"
+GOLANG_CHECKSUM: "sha256:a4da5f4c07dfda8194c4621611aeb7ceaab98af0b38bfb29e1be2ebb04c3556c"
+
+profile_items:
+  - regexp: "^export GOPATH="
+    line: "export GOPATH=$HOME"
+  - regexp: "^export PATH="
+    line: "export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin"

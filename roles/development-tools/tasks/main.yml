@@ -10,12 +10,13 @@
   snap:
     name: "postman"
 
-- name: Development Tools - VSCode, VSCodium, Sublime Text Snaps w/ --classic
+- name: Development Tools - VSCode, VSCodium, Sublime Text, Redis desktop manager Snaps w/ --classic
   become: true
   snap:
     name: "{{item}}"
     classic: "yes"
   loop:
-    - "code"
-    - "codium"
-    - "sublime-text"
+        #- "code"
+      #- "codium"
+      #- "sublime-text"
+    - "redis-desktop-manager"
