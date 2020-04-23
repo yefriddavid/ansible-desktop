@@ -1,0 +1,15 @@
+---
+- name: Configure the jtaylor APT key
+  become: true 
+  apt_key:
+   keyserver: keyserver.ubuntu.com
+   id: 57A0E8DEA026F8D8173E90A57858088158B80F90
+
+- name: Configure the Keepass APT repositories
+  become: true 
+  apt_repository: repo="deb http://ppa.launchpad.net/jtaylor/keepass/ubuntu {{ ansible_distribution_release }} main" state=present
+
+- name: Install Keepass
+  become: true 
+  apt: pkg=keepass2 state=present
+

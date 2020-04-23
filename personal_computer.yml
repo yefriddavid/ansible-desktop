@@ -3,7 +3,13 @@
   connection: local
   roles:
     - {role: create-user, tags: ['create-user']}
+    - {role: redis-desktop, tags: ['redis-desktop']}
     - {role: nvim, tags: ['nvim']}
+    - {role: supervisor, tags: ['supervisor']}
+    - {role: autossh, tags: ['autossh']}
+    - {role: clusterssh, tags: ['clusterssh']}
+    - {role: keepass, tags: ['keepass']}
+    - {role: tmux, tags: ['tmux']}
     - {role: ranger, tags: ['ranger']}
     - {role: virtualbox, tags: ['virtualbox']}
     - {role: mysql-workbench, tags: ['mysql-workbench']}

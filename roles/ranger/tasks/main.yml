@@ -1,0 +1,6 @@
+---
+- name: Install ranger
+  apt: name={{ item }} state=present
+  with_items:
+    - ranger
+  become: true

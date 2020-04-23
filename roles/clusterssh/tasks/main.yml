@@ -1,0 +1,6 @@
+---
+- name: Install clusterssh
+  apt: name={{ item }} state=present
+  with_items:
+    - clusterssh
+  become: true

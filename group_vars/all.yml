@@ -17,6 +17,7 @@ nodejs_yarn_global_packages:
 stacer_version: 1.1.0
 zsh_theme: robbyrussell
 zsh_plugins:
+  - wd 
   - ansible
   - aws
   - docker

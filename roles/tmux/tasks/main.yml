@@ -1,0 +1,8 @@
+---
+- name: Install tmux and git
+  apt: name={{ item }} state=present
+  with_items:
+    - tmux
+      #- git
+      #when: install
+  become: true

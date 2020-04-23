@@ -2,38 +2,32 @@
 #neovim_config_dir: "{{ neovim_user_dir }}/.config/nvim"
 #config_dir: "{{ ansible_env.XDG_CONFIG_HOME | default(default_xdg_config_home) }}"
 neovim:
-  config_dir: "{{ ansible_env.XDG_CONFIG_HOME | default(default_xdg_config_home) }}/nvim"
+ config_dir: "{{ ansible_env.XDG_CONFIG_HOME | default(default_xdg_config_home) }}/nvim"
 #neovim_config_dir: "{{ config_dir }}/nvim"
 
 # Autoload directory of neovim
 #neovim_autoload_dir: "{{ neovim_user_dir }}/.local/share/nvim/site/autoload/"
-neovim:
-  autoload_dir: "{{ neovim.config_dir }}/autoload/"
+#//autoload_dir: "{{ neovim.config_dir }}/autoload/"
 
 # Path to configuration file of neovim
-neovim:
-  config_file: "{{ neovim.config_dir }}/init.vim"
+#//config_file: "{{ neovim.config_dir }}/init.vim"
 
 # Configuration for neovim
-neovim:
-  configuration: ~
+ configuration: ~
 
 # Packages which shall be installed
-neovim:
-  packages:
+ packages: 
   - neovim
   - python-neovim
   - python3-neovim
 
 # List of neovim plugins
-neovim:
-  plugins: []
+ plugins: []
 
 # User for whom neovim shall be configured
-neovim:
-  user_id: "{{ ansible.user_id }}"
+ user_id: "{{ ansible_user_id }}"
 
 # Home directory of the user for whom neovim shall be configured
-neovim:
-  user_dir: "{{ getent_passwd[neovim_user_id][4] }}"
+neovim_user_dir: "{{ getent_passwd[neovim.user_id][4] }}"
+#user_dir: "{{ getent_passwd[user_id][4] }}"
 

@@ -83,8 +83,38 @@ lint:  ## Lint the repo
 lint:
 	bash scripts/lint.sh
 
+virtualbox:
+virtualbox: ## Install virtualbox 
+	@$(ANSIBLE) --tags="virtualbox"
+
+autossh:
+autossh: ## Install autossh
+	@$(ANSIBLE) --tags="autossh"
+
+clusterssh:
+clusterssh: ## Install clusterssh
+	@$(ANSIBLE) --tags="clusterssh"
+ranger:
+ranger: ## Install ranger
+	@$(ANSIBLE) --tags="ranger"
+
+keepass:
+keepass: ## Install keepass
+	@$(ANSIBLE) --tags="keepass"
+
+supervisor:
+supervisor: ## Install supervisor
+	@$(ANSIBLE) --tags="supervisor"
+
+redis-desktop:
+redis-desktop: ## Install redis-desktop
+	@$(ANSIBLE) --tags="redis-desktop"
+tmux:
+tmux: ## Install tmux
+	@$(ANSIBLE) --tags="tmux"
+
 nvim:
-nvim: ## Install zsh and oh-my-zsh
+nvim: ## Install virtualbox 
 	@$(ANSIBLE) --tags="nvim"
 
 zsh:

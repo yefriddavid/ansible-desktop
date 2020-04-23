@@ -3,8 +3,9 @@
 #    msg: System {{ neovim_config_file }}
 #    #msg: System {{ default(defa) }}
 #
-#- debug:
-#    msg: Hello david
+- debug:
+        #msg: Hello david 
+        msg: "Hello david {{ neovim }}"
 
 - tags: [neovim]
   block:
@@ -19,6 +20,10 @@
         database: passwd
         key: "{{ neovim.user_id }}"
         split: ~
+      #getent:
+      #  database: passwd
+      #  key: "{{ neovim.user_id }}"
+      #  split: ~
 
 #    - name: Create neovim directory for autoloading configurations
 #      file:

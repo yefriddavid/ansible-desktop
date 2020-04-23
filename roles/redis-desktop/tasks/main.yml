@@ -1,0 +1,4 @@
+---
+  - name: Install prince
+    apt:
+      deb: https://github.com/uglide/RedisDesktopManager/releases/download/0.8.3/redis-desktop-manager_0.8.3-120_amd64.deb
