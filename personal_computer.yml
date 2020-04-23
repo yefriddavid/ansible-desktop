@@ -6,9 +6,8 @@
     - {role: flutter, tags: ['flutter']}
     - {role: fzf, tags: ['fzf']}
     - {role: tree, tags: ['tree']}
-    - {role: golang, tags: ['golang']}
+    - {role: golang, tags: ['golang']} # no works yet
     - {role: aws-cli, tags: ['aws-cli']}
-    - {role: redis-desktop, tags: ['redis-desktop']}
     - {role: nvim, tags: ['nvim']}
     - {role: supervisor, tags: ['supervisor']}
     - {role: autossh, tags: ['autossh']}
@@ -16,8 +15,8 @@
     - {role: keepass, tags: ['keepass']}
     - {role: tmux, tags: ['tmux']}
     - {role: ranger, tags: ['ranger']}
-    - {role: virtualbox, tags: ['virtualbox']}
-    - {role: mysql-workbench, tags: ['mysql-workbench']}
+    - {role: virtualbox, tags: ['virtualbox']} # not works 
+    - {role: mysql-workbench, tags: ['mysql-workbench']} 
 
     - {role: zsh, tags: ['zsh']}
     - {role: cherrytree, tags: ['cherrytree']}

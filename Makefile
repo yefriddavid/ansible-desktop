@@ -106,10 +106,6 @@ supervisor:
 supervisor: ## Install supervisor
 	@$(ANSIBLE) --tags="supervisor"
 
-redis-desktop:
-redis-desktop: ## Install redis-desktop
-	@$(ANSIBLE) --tags="redis-desktop"
-
 golang:
 golang: ## Install golang
 	@$(ANSIBLE) --tags="golang"
@@ -121,6 +117,10 @@ fzf: ## Install fzf
 tree:
 tree: ## Install tree
 	@$(ANSIBLE) --tags="tree"
+
+mysql-workbench:
+mysql-workbench: ## Install mysql workbench
+	@$(ANSIBLE) --tags="mysql-workbench"
 
 tmux:
 tmux: ## Install tmux
