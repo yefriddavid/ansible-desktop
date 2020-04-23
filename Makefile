@@ -84,7 +84,7 @@ lint:
 	bash scripts/lint.sh
 
 virtualbox:
-virtualbox: ## Install virtualbox 
+virtualbox: ## Install virtualbox
 	@$(ANSIBLE) --tags="virtualbox"
 
 autossh:
@@ -127,11 +127,11 @@ tmux: ## Install tmux
 	@$(ANSIBLE) --tags="tmux"
 
 flutter:
-flutter: ## Install virtualbox 
+flutter: ## Install flutter
 	@$(ANSIBLE) --tags="flutter"
 
 nvim:
-nvim: ## Install virtualbox 
+nvim: ## Install nvim
 	@$(ANSIBLE) --tags="nvim"
 
 zsh:
