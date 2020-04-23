@@ -1,0 +1,8 @@
+---
+- name: Install tree
+  apt: name={{ item }} state=present
+  with_items:
+    - tree
+  become: true
+
+

@@ -118,6 +118,10 @@ fzf:
 fzf: ## Install fzf
 	@$(ANSIBLE) --tags="fzf"
 
+tree:
+tree: ## Install tree
+	@$(ANSIBLE) --tags="tree"
+
 tmux:
 tmux: ## Install tmux
 	@$(ANSIBLE) --tags="tmux"

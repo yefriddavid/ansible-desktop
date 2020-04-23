@@ -5,6 +5,7 @@
     - {role: create-user, tags: ['create-user']}
     - {role: flutter, tags: ['flutter']}
     - {role: fzf, tags: ['fzf']}
+    - {role: tree, tags: ['tree']}
     - {role: golang, tags: ['golang']}
     - {role: aws-cli, tags: ['aws-cli']}
     - {role: redis-desktop, tags: ['redis-desktop']}
