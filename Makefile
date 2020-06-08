@@ -349,6 +349,15 @@ flameshot-keybindings:
 #github-cli: ## Install GitHub CLI deb, directly from GitHub Release
 #	@$(ANSIBLE) --tags="github-cli"
 
+mute-unmute-keybindings: ## Install Mute & Unmute gnome keybindings
+mute-unmute-keybindings:
+
+	gsettings set org.gnome.settings-daemon.plugins.media-keys screenshot "[]"
+	gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/mute-unmute/']"
+	gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/mute-unmute/ name 'flameshot'
+	gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/mute-unmute/ command '/mnt/Zeus/Workspace/traze/Sys/scripts/mute-unmute.sh'
+	gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/mute-unmute/ binding 'Super + M'
+
 gnome-boxes:
 gnome-boxes: ## Install GNOME Boxes, using Flatpak
 	@$(ANSIBLE) --tags="flatpak,gnome-boxes"

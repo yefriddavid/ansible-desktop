@@ -31,7 +31,7 @@
 - name: Configure fonts - Monospace Text
   dconf:
     key: "/org/gnome/desktop/interface/monospace-font-name"
-    value: "'JetBrains Mono Regular 9'"
+    value: "'JetBrains Mono Regular 12'"
     state: present
 
 - name: Configure fonts - Window Title

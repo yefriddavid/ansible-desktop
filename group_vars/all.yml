@@ -1,7 +1,7 @@
 ---
 default_xdg_config_home: "{{ ansible_user_dir }}/.config"
 aptcachetime: 3600
-mysql_packages:          
+mysql_packages:
         - libpng12-0
 
 docker_compose_version: 1.25.4
@@ -19,13 +19,15 @@ nodejs_yarn_global_packages:
 stacer_version: 1.1.0
 zsh_theme: robbyrussell
 zsh_plugins:
-  - wd 
+  - wd
   - ansible
   - aws
   - docker
   - docker-compose
   - git
   - pipenv
+  - zsh-gvm
+  - tmuxinator ## it is on test mode now
 
 # fzf
 

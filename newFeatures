@@ -1,0 +1,14 @@
+alias $EDITOR="nvim"
+tmuxp
+mute unmute /mnt/Zeus/Workspace/traze/Sys/scripts/mute-unmute.sh
+
+
+icons per workspace
+
+https://askubuntu.com/questions/607640/how-to-get-a-different-unity-launcher-with-different-icons-on-each-workspace/608295#608295
+
+
+position notifications
+http://ubuntuhandbook.org/index.php/2018/05/change-notification-position-ubuntu-18-04/
+
+

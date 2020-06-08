@@ -403,3 +403,12 @@ https://superuser.com/a/1510257/972109
 pip3 intsall psutil
 my custom toolbars
 
+
+fzf
+Ag enter
+'text to search'
+Rg
+
+https://extensions.gnome.org/extension/551/workspace-labels/
+
+wmctrl

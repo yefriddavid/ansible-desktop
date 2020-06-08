@@ -4,7 +4,7 @@
 #    #msg: System {{ default(defa) }}
 #
 - debug:
-        #msg: Hello david 
+        #msg: Hello david
         msg: "Hello david {{ neovim }}"
 
 - tags: [neovim]
@@ -55,5 +55,13 @@
 #        dest: "{{ neovim.config_file }}"
 #        mode: 0o600
 #        owner: "{{ neovim.user_id }}"
+
+
+#curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+#chmod +x nvim.appimage
+#sudo mv nvim.appimage /usr/bin/nvim
+#python3 -m pip install --user --upgrade pynvim
+#https://neovim.io/doc/user/provider.html#
+
 
 
